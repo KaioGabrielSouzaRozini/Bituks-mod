@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bituksmod:red_acacia_stick"
+    },
+    "X": {
+      "item":"minecraft:gold_ingot"
+    },
+    "Y": {
+      "item":"minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " X ",
+    " #X",
+    "Y  "
+  ],
+  "result": {
+    "item": "bituksmod:dagger_handle"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "#": {
+      "item": "bituksmod:turmalina_block"
+    },
+    "X": {
+      "item":"minecraft:diamond"
+    }
+  },
+  "pattern": [
+    " X ",
+    "X#X",
+    " X "
+  ],
+  "result": {
+    "item": "bituksmod:turmalina_cristal"
+  }
+}

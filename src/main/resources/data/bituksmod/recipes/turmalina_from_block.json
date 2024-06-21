@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bituksmod:turmalina_block"
+    }
+  ],
+  "result": {
+    "item": "bituksmod:turmalina",
+    "count": 9
+  }
+}

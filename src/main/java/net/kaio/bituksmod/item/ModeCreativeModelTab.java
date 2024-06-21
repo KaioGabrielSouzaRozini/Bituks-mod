@@ -30,6 +30,7 @@ public class ModeCreativeModelTab {
                 pOutput.accept(ModItems.TURMALINA_SEEDS.get());
                 pOutput.accept(ModItems.RED_ACACIA_STICK.get());
                 pOutput.accept(ModBlocks.RED_ACACIA_SAPLING.get());
+                pOutput.accept(ModBlocks.TURMALINA_ORE.get());
                 pOutput.accept(ModBlocks.DEEPSLATE_TURMALINA_ORE.get());
                 pOutput.accept(ModBlocks.RED_ACACIA_LEAVES.get());
                 pOutput.accept(ModBlocks.TURMALINA_BLOCK.get());

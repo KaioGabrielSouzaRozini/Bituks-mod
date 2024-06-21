@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "bituksmod:red_acacia_log"
+    }
+  ],
+  "result": {
+    "item": "bituksmod:red_acacia_planks",
+    "count": 4
+  }
+}
