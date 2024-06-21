@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "bituksmod:block/turmalina_stage0"
+  },"render_type": "cutout"
+}

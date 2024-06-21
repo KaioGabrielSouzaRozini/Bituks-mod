@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "bituksmod:block/red_acacia_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "bituksmod:block/red_acacia_log"
+    },
+    "axis=z": {
+      "model": "bituksmod:block/red_acacia_log_horizontal",
+      "x": 90
+    }
+  }
+}

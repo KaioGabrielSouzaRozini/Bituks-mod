@@ -1,0 +1,11 @@
+{
+  "variants": {
+    "age=0": { "model": "bituksmod:block/turmalina_stage0" },
+    "age=1": { "model": "bituksmod:block/turmalina_stage1" },
+    "age=2": { "model": "bituksmod:block/turmalina_stage2" },
+    "age=3": { "model": "bituksmod:block/turmalina_stage3" },
+    "age=4": { "model": "bituksmod:block/turmalina_stage4" },
+    "age=5": { "model": "bituksmod:block/turmalina_stage5" },
+    "age=6": { "model": "bituksmod:block/turmalina_stage6" }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cross",
+  "textures": {
+    "cross": "bituksmod:block/red_acacia_sapling"
+  },
+  "render_type": "cutout"
+}

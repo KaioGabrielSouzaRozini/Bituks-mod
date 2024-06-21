@@ -1,6 +1,9 @@
 package net.kaio.bituksmod;
 
 import com.mojang.logging.LogUtils;
+import net.kaio.bituksmod.block.ModBlocks;
+import net.kaio.bituksmod.item.ModItems;
+import net.kaio.bituksmod.item.ModeCreativeModelTab;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,6 +27,11 @@ public class BituksMod
     public BituksMod()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModeCreativeModelTab.register(modEventBus);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -59,5 +67,5 @@ public class BituksMod
         {
 
         }
+        }
     }
-}
