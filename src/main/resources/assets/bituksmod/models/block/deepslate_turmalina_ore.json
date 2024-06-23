@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "bituksmod:block/deepslate_turmalina_ore"
-  }
-}

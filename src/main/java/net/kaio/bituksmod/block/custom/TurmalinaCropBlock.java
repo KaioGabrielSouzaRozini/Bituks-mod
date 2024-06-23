@@ -5,15 +5,17 @@ import net.kaio.bituksmod.item.ModItems;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.CropBlock;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 
 public class TurmalinaCropBlock extends CropBlock {
-    public static final IntegerProperty AGE = IntegerProperty.create("age", 0, 6);
+    public static final int MAX_AGE = 5;
+    public static final IntegerProperty AGE = BlockStateProperties.AGE_5;
 
-    public TurmalinaCropBlock(Properties properties) {
-        super(properties);
+    public TurmalinaCropBlock(Properties pProperties) {
+        super(pProperties);
     }
 
     @Override
@@ -28,11 +30,11 @@ public class TurmalinaCropBlock extends CropBlock {
 
     @Override
     public int getMaxAge() {
-        return 6                                        ;
+        return MAX_AGE;
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-        builder.add(AGE);
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
+        pBuilder.add(AGE);
     }
 }

@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "bituksmod:block/red_acacia_leaves"
-  }
-}

@@ -38,8 +38,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE)
                     .strength(6f).requiresCorrectToolForDrops()));
 
-    public static final RegistryObject<Block> TURMALINA_CROP = BLOCKS.register("turmalina_crop",
-            () -> new TurmalinaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+    public static final RegistryObject<Block> TURMALINA_CROP = registerBlock("turmalina_crop",
+            () -> new TurmalinaCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT).noOcclusion().noCollission()));
 
     public static final RegistryObject<Block> RED_ACACIA_LOG = registerBlock("red_acacia_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).requiresCorrectToolForDrops()));

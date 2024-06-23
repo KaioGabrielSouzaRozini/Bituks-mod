@@ -1,0 +1,35 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "bituksmod:turmalina_from_blasting_turmalina_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_turmalina_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "bituksmod:turmalina_ore"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_turmalina_ore",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "bituksmod:turmalina_from_blasting_turmalina_ore"
+    ]
+  },
+  "sends_telemetry_event": false
+}

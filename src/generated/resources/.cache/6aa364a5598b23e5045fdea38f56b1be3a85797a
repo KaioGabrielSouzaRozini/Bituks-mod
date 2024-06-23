@@ -1,0 +1,5 @@
+// 1.20.1	2024-06-23T15:50:20.4523831	Tags for minecraft:block mod id bituksmod
+38d7ceb439bc6d21bbeb093b271286fcb1166ca7 data/minecraft/tags/blocks/logs_that_burn.json
+17e0477f2d5b1eccd57b659f5d4f691c5c074a4d data/minecraft/tags/blocks/mineable/pickaxe.json
+17e0477f2d5b1eccd57b659f5d4f691c5c074a4d data/minecraft/tags/blocks/needs_iron_tool.json
+697d04ae41c28f99838cb7657cb2c8e77a88ad14 data/minecraft/tags/blocks/planks.json
