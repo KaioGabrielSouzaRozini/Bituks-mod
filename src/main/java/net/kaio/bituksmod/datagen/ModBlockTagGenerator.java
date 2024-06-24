@@ -1,7 +1,6 @@
 package net.kaio.bituksmod.datagen;
 
 import net.kaio.bituksmod.BituksMod;
-import net.kaio.bituksmod.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;

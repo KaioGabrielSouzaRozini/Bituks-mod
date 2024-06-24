@@ -4,7 +4,7 @@ import net.kaio.bituksmod.BituksMod;
 import net.kaio.bituksmod.block.custom.ModFlammableRotatedPillarBlock;
 import net.kaio.bituksmod.block.custom.TurmalinaCropBlock;
 import net.kaio.bituksmod.item.ModItems;
-import net.kaio.bituksmod.world.feature.tree.RedAcaciaTreeGrower;
+import net.kaio.bituksmod.worldgen.tree.RedAcaciaTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;

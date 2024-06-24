@@ -1,7 +1,6 @@
-package net.kaio.bituksmod.world.feature.tree;
+package net.kaio.bituksmod.worldgen.tree;
 
-import net.kaio.bituksmod.world.feature.ModConfiguredFeatures;
-import net.minecraft.core.Holder;
+import net.kaio.bituksmod.worldgen.ModConfiguredFeatures;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.grower.AbstractTreeGrower;

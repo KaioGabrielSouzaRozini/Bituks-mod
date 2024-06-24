@@ -1,4 +1,4 @@
-package net.kaio.bituksmod.world.feature;
+package net.kaio.bituksmod.worldgen;
 
 import net.minecraft.world.level.levelgen.placement.*;
 

@@ -1,4 +1,4 @@
-package net.kaio.bituksmod.world.feature.tree;
+package net.kaio.bituksmod.worldgen.tree;
 
 import net.kaio.bituksmod.BituksMod;
 import net.minecraft.core.registries.Registries;

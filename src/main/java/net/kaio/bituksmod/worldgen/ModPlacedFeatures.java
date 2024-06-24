@@ -1,10 +1,9 @@
-package net.kaio.bituksmod.world.feature;
+package net.kaio.bituksmod.worldgen;
 
 import net.kaio.bituksmod.BituksMod;
 import net.kaio.bituksmod.block.ModBlocks;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
-import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
@@ -14,13 +13,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.placement.*;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
 
 import java.util.List;
-
-import static net.kaio.bituksmod.world.feature.ModConfiguredFeatures.registerKey;
 
 public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> TURMALINA_PLACED_KEY = registerKey("turmalina_placed");

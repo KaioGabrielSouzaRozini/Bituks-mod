@@ -25,6 +25,7 @@ public class ModeCreativeModelTab {
                 pOutput.accept(ModItems.TURMALINA_CRISTAL.get());
                 pOutput.accept(ModItems.TURMALINA_FRUIT.get());
                 pOutput.accept(ModItems.TURMALINA_SWORD.get());
+                pOutput.accept(ModItems.TURMALINA_DAGGER.get());
                 pOutput.accept(ModItems.TURMALINA_PEARL.get());
                 pOutput.accept(ModItems.TURMALINA_PEARL.get());
                 pOutput.accept(ModItems.TURMALINA_SEEDS.get());
@@ -38,8 +39,12 @@ public class ModeCreativeModelTab {
                 pOutput.accept(ModBlocks.RED_ACACIA_WOOD.get());
                 pOutput.accept(ModBlocks.RED_ACACIA_PLANKS.get());
                 pOutput.accept(ModBlocks.STRIPPED_RED_ACACIA_LOG.get());
-                pOutput.accept(ModBlocks.TURMALINA_CROP.get());
                 pOutput.accept(ModBlocks.STRIPPED_RED_ACACIA_WOOD.get());
+
+                pOutput.accept(ModItems.TURMALINA_HELMET.get());
+                pOutput.accept(ModItems.TURMALINA_CHESTLATE.get());
+                pOutput.accept(ModItems.TURMALINA_LEGGINGS.get());
+                pOutput.accept(ModItems.TURMALINA_BOOTS.get());
 
             })
                     .build());

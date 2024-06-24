@@ -10,17 +10,22 @@ import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 
+import java.util.List;
 import java.util.Map;
 
 public class ModArmorItem extends ArmorItem {
-    private static final Map<ArmorMaterial, MobEffectInstance> MATERIAL_TO_EFFECT_MAP =
-            (new ImmutableMap.Builder<ArmorMaterial, MobEffectInstance>())
-                    .put(ModArmorMaterials.SAPPHIRE, new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 1,
-                            false,false, true)).build();
+    private static final Map<ArmorMaterial, List<MobEffectInstance>> MATERIAL_TO_EFFECT_MAP =
+            (new ImmutableMap.Builder<ArmorMaterial, List<MobEffectInstance>>())
+                    .put(ModArmorMaterials.TURMALINA, List.of(
+                            new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 9,
+                                    false,false, true),
+                            new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 200, 9,
+                                    false,false, true),
+                            new MobEffectInstance(MobEffects.JUMP, 200, 9,
+                                    false,false, true))).build();
 
-
-    public ModArmorItem(ArmorMaterial pMaterial, Type pType, Properties pProperties) {
-        super(pMaterial, pType, pProperties);
+    public ModArmorItem(ArmorMaterial material, Type slot, Properties settings) {
+        super(material, slot, settings);
     }
 
     @Override
@@ -33,22 +38,22 @@ public class ModArmorItem extends ArmorItem {
     }
 
     private void evaluateArmorEffects(Player player) {
-        for (Map.Entry<ArmorMaterial, MobEffectInstance> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
+        for (Map.Entry<ArmorMaterial, List<MobEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {
             ArmorMaterial mapArmorMaterial = entry.getKey();
-            MobEffectInstance mapStatusEffect = entry.getValue();
+            List<MobEffectInstance> mapStatusEffects = entry.getValue();
 
             if(hasCorrectArmorOn(mapArmorMaterial, player)) {
-                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffect);
+                addStatusEffectForMaterial(player, mapArmorMaterial, mapStatusEffects);
             }
         }
     }
 
     private void addStatusEffectForMaterial(Player player, ArmorMaterial mapArmorMaterial,
-                                            MobEffectInstance mapStatusEffect) {
-        boolean hasPlayerEffect = player.hasEffect(mapStatusEffect.getEffect());
+                                            List<MobEffectInstance> mapStatusEffect) {
+        boolean hasPlayerEffect = mapStatusEffect.stream().anyMatch(effect -> player.hasEffect(effect.getEffect()));
 
         if(hasCorrectArmorOn(mapArmorMaterial, player) && !hasPlayerEffect) {
-            player.addEffect(new MobEffectInstance(mapStatusEffect));
+            mapStatusEffect.stream().forEach(effect -> player.addEffect(new MobEffectInstance(effect)));
         }
     }
 

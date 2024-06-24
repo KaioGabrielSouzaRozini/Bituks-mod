@@ -1,3 +1,4 @@
-// 1.20.1	2024-06-23T15:50:20.4533822	Tags for minecraft:item mod id bituksmod
+// 1.20.1	2024-06-24T11:32:28.8045266	Tags for minecraft:item mod id bituksmod
 38d7ceb439bc6d21bbeb093b271286fcb1166ca7 data/minecraft/tags/items/logs_that_burn.json
 697d04ae41c28f99838cb7657cb2c8e77a88ad14 data/minecraft/tags/items/planks.json
+4ba80ba02b4d061046e5d5d1cf62d166eb4d0372 data/minecraft/tags/items/trimmable_armor.json

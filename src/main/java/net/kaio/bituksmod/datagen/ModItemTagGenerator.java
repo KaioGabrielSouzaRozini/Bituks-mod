@@ -1,6 +1,7 @@
 package net.kaio.bituksmod.datagen;
 
 import net.kaio.bituksmod.BituksMod;
+import net.kaio.bituksmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -20,6 +21,12 @@ public class ModItemTagGenerator extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.TURMALINA_HELMET.get(),
+                        ModItems.TURMALINA_CHESTLATE.get(),
+                        ModItems.TURMALINA_LEGGINGS.get(),
+                        ModItems.TURMALINA_BOOTS.get());
+
         this.tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.RED_ACACIA_LOG.get().asItem())
                 .add(ModBlocks.RED_ACACIA_WOOD.get().asItem())

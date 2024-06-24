@@ -1,7 +1,7 @@
-package net.kaio.bituksmod.world.feature.tree;
+package net.kaio.bituksmod.worldgen.tree;
 
 import net.kaio.bituksmod.BituksMod;
-import net.kaio.bituksmod.world.feature.tree.custom.RedAcaciaTrunkPlacer;
+import net.kaio.bituksmod.worldgen.tree.custom.RedAcaciaTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.minecraftforge.eventbus.api.IEventBus;

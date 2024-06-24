@@ -2,11 +2,9 @@ package net.kaio.bituksmod.item;
 
 import net.kaio.bituksmod.BituksMod;
 import net.kaio.bituksmod.block.ModBlocks;
+import net.kaio.bituksmod.item.custom.ModArmorItem;
 import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemNameBlockItem;
-import net.minecraft.world.item.SwordItem;
-import net.minecraft.world.item.Tiers;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -28,11 +26,20 @@ public class ModItems {
     public static final RegistryObject<Item> TURMALINA_FRUIT = ITEMS.register("turmalina_fruit",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(2f).build())));
 
-    public static final RegistryObject<Item> TURMALINA_SWORD = ITEMS.register("turmalina_sword", () -> new SwordItem(Tiers.NETHERITE, 3, -2.4f,
+    public static final RegistryObject<Item> TURMALINA_SWORD = ITEMS.register("turmalina_sword", () -> new SwordItem(Tiers.DIAMOND, 3, -2.4f,
             new Item.Properties().stacksTo(1)));
 
     public static final RegistryObject<Item> TURMALINA_DAGGER = ITEMS.register("turmalina_dagger", () -> new SwordItem(Tiers.NETHERITE, 5, 8f,
             new Item.Properties().stacksTo(1)));
+
+    public static final RegistryObject<Item> TURMALINA_HELMET = ITEMS.register("turmalina_helmet", () -> new ModArmorItem(ModArmorMaterials.TURMALINA, ArmorItem.Type.HELMET,
+            new Item.Properties()));
+    public static final RegistryObject<Item> TURMALINA_CHESTLATE = ITEMS.register("turmalina_chestplate", () -> new ModArmorItem(ModArmorMaterials.TURMALINA, ArmorItem.Type.CHESTPLATE,
+            new Item.Properties()));
+    public static final RegistryObject<Item> TURMALINA_LEGGINGS = ITEMS.register("turmalina_leggings", () -> new ModArmorItem(ModArmorMaterials.TURMALINA, ArmorItem.Type.LEGGINGS,
+            new Item.Properties()));
+    public static final RegistryObject<Item> TURMALINA_BOOTS = ITEMS.register("turmalina_boots", () -> new ModArmorItem(ModArmorMaterials.TURMALINA, ArmorItem.Type.BOOTS,
+            new Item.Properties()));
 
 
 

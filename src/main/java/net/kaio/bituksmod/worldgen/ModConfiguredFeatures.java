@@ -1,9 +1,6 @@
-package net.kaio.bituksmod.world.feature;
+package net.kaio.bituksmod.worldgen;
 
-import com.google.common.base.Supplier;
-import com.google.common.base.Suppliers;
 import net.kaio.bituksmod.BituksMod;
-import net.kaio.bituksmod.world.feature.tree.custom.RedAcaciaTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -17,6 +14,7 @@ import net.minecraft.world.level.levelgen.feature.configurations.TreeConfigurati
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.BlobFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
+import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
 import net.kaio.bituksmod.block.ModBlocks;
@@ -28,12 +26,7 @@ import java.util.List;
 public class ModConfiguredFeatures {
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> OVERWORLD_TURMALINA_ORE_KEY = registerKey("turmalina_ore");
-    public static final ResourceKey<ConfiguredFeature<?, ?>> RED_ACACIA_KEY = registerKey("red_acacia");
-
-    public static final Supplier<List<OreConfiguration.TargetBlockState>> OVERWORLD_TURMALINA_ORES = Suppliers.memoize(() -> List.of(
-            OreConfiguration.target(new TagMatchTest(BlockTags.BASE_STONE_OVERWORLD), ModBlocks.TURMALINA_ORE.get().defaultBlockState()),
-            OreConfiguration.target(new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES), ModBlocks.DEEPSLATE_TURMALINA_ORE.get().defaultBlockState())
-    ));
+        public static final ResourceKey<ConfiguredFeature<?, ?>> RED_ACACIA_KEY = registerKey("red_acacia");
 
     public static void bootstrap(BootstapContext<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceable = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
@@ -47,7 +40,7 @@ public class ModConfiguredFeatures {
 
         register(context, RED_ACACIA_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.RED_ACACIA_LOG.get()),
-                new RedAcaciaTrunkPlacer(5, 4, 3),
+                new StraightTrunkPlacer(5, 4, 3),
 
                 BlockStateProvider.simple(ModBlocks.RED_ACACIA_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(3), ConstantInt.of(2), 3),
